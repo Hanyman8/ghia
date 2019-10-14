@@ -318,7 +318,7 @@ def test_strategy_change():
     assert cp.returncode == 0
     assert len(cp.stderr) == 0
     assert cp.stdout.count(f'-> {repo}#') == 112
-    assert cp.stdout.count('   - ') == 31  # 31 + 3 = 34 from before (8 initial + 26 additional)
+    assert cp.stdout.count('   - ') == 34  # 31 + 3 = 34 from before (8 initial + 26 additional)
     assert cp.stdout.count('   = ') == 3  # (all below)
     assert cp.stdout.count('   + ') == 1  # (all below)
     assert f'-> {repo}#5 (https://github.com/{repo}/issues/5)\n' \
